@@ -10,4 +10,14 @@ def breakdown_time(seconds):
     m += int((seconds%3600)/60)
     s = seconds - h*3600 - m*60
     
-    return {3600: h, 60: m, 1: s}
+    result_dict = {}
+
+    
+    if h > 0:
+        result_dict[3600] = h
+    if m > 0:
+        result_dict[60] = m
+    if s > 0:
+        result_dict[1] = s
+
+    return result_dict
