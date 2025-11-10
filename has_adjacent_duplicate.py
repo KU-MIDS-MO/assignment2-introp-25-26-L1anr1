@@ -1,4 +1,5 @@
 def has_adjacent_duplicate(L):
-    ### Replace with your own code (begin) ###
-    pass
-    ### Replace with your own code (end)   ###
+    for i in range (1, len(L)):
+        if L[i-1] == L[i]:
+            return True
+    return False
